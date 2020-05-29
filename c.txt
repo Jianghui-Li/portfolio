@@ -1,0 +1,136 @@
+Design process:
+I used some words as an array.
+I wrote "baldum vs yorn" in the array and make sure I wrote it carefully. Additionally, I have to make sure the location of each character on the correct spot.
+I built a main loop that runs 20 times for 20 chances for you to guess, and a sub loop runs 14 times for 14 guesses because there are only 14 correct characters in total.
+Try not to guess the same letters you used before, but you still can guess the same letters if you want to loes.
+After you tried for 20 times, you program will decide if you are right or not.
+
+Writing the program:
+#include"stdafx.h"
+int main(void)
+{
+	char A[14] = { 'b', 'a', 'l', 'd', 'u', 'm', ' ', 'v', 's', ' ', 'y', 'o', 'r', 'n' }; /*The words that I would use, and there are 14 letters in total*/
+	char B[14] = { '-','-','-','-','-','-','-','-','-','-','-','-','-','-' }; /*The 14 blanks that matches the 14 letters.*/
+	char letter;
+	int i, j, k=0;
+	for (i = 1; i <= 20; i++) /*The main loop that will make you guess 18 times.*/
+	{
+		printf("\n Guess a new letter:");
+		scanf_s(" %c", &letter);
+		for (j = 0; j <= 13; j++) /*The sub loop that runs 14 times.*/
+		{
+			if (A[j] == letter && j != 6 && j != 9) /*There are two blanks in these three words.*/
+			{
+				B[j] = letter;
+				printf("%c", B[j]);
+			}
+			else if (j == 6 || j == 9) /*There are two blanks in these three words.*/
+			{
+				B[j] = ' ';
+				printf("%c", B[j]);
+			}
+			else {
+				printf("%c", B[j]);
+			}
+		}
+	}
+	for (j = 0; j <= 13; j++)
+		if (A[j] <= B[j])
+			k++;
+		if (k = 14)
+			printf("\n Wow! You are good at this!"); /*If you can guess these words using 18 times or less, it shows.*/
+		else
+			printf("\n Wasted! The correct answer is baldum vs yorn"); /*If you cannot guess thoes words using all 18 times, it shows.*/
+	return 0;
+}
+
+
+Test runs:
+
+ Guess a new letter:a
+-a---- -- ----
+ Guess a new letter:b
+ba---- -- ----
+ Guess a new letter:c
+ba---- -- ----
+ Guess a new letter:d
+ba-d-- -- ----
+ Guess a new letter:l
+bald-- -- ----
+ Guess a new letter:u
+baldu- -- ----
+ Guess a new letter:m
+baldum -- ----
+ Guess a new letter:q
+baldum -- ----
+ Guess a new letter:v
+baldum v- ----
+ Guess a new letter:s
+baldum vs ----
+ Guess a new letter:y
+baldum vs y---
+ Guess a new letter:o
+baldum vs yo--
+ Guess a new letter:r
+baldum vs yor-
+ Guess a new letter:m
+baldum vs yor-
+ Guess a new letter:n
+baldum vs yorn
+ Guess a new letter:p
+baldum vs yorn
+ Guess a new letter:d
+baldum vs yorn
+ Guess a new letter:c
+baldum vs yorn
+ Guess a new letter:d
+baldum vs yorn
+ Guess a new letter:c
+baldum vs yorn
+ Wow! You are good at this!
+
+
+
+ Guess a new letter:q
+------ -- ----
+ Guess a new letter:e
+------ -- ----
+ Guess a new letter:w
+------ -- ----
+ Guess a new letter:r
+------ -- --r-
+ Guess a new letter:u
+----u- -- --r-
+ Guess a new letter:o
+----u- -- -or-
+ Guess a new letter:p
+----u- -- -or-
+ Guess a new letter:i
+----u- -- -or-
+ Guess a new letter:u
+----u- -- -or-
+ Guess a new letter:c
+----u- -- -or-
+ Guess a new letter:x
+----u- -- -or-
+ Guess a new letter:z
+----u- -- -or-
+ Guess a new letter:v
+----u- v- -or-
+ Guess a new letter:b
+b---u- v- -or-
+ Guess a new letter:n
+b---u- v- -orn
+ Guess a new letter:m
+b---um v- -orn
+ Guess a new letter:k
+b---um v- -orn
+ Guess a new letter:j
+b---um v- -orn
+ Guess a new letter:k
+b---um v- -orn
+ Guess a new letter:j
+b---um v- -orn
+ Wasted! The correct answer is baldum vs yorn
+
+ 
