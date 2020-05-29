@@ -9,6 +9,37 @@ html {
 p {
     font-size: 16px;
 }
+h1 {
+    font-size: 48px;
+    overflow: hidden;
+    text-align: center;
+}
+h1:before,
+h1:after {
+  background-color: white;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+h1:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+h1:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+h2 {
+    font-size: 36px;
+    font-family: Times New Roman, serif;
+    font-weight: 400;
+    color: black;
+    text-shadow: 2px 1px 0 #c1c1c1;
+}
+
 @media(min-width:767px) {
     .navbar {
         padding: 20px 0;
@@ -36,35 +67,102 @@ p {
     bottom: 50px;
     right: 0;
     background-color: #FFF;
-    color: #337AB7;
+    color: lightgray;
     text-align: center;
     font-size: 30px;
     text-decoration: none;
 }
 #back2Top:hover {
-    background-color: #337AB7;
+    background-color: lightgray;
     color: #FFF;
 }
 .welcome-section {
     height: 40%;
     padding-top: 150px;
     text-align: center;
-    background: #fff;
+    background-image: url('https://i.imgur.com/7Ntii5S.jpg');
+    background-size: cover;
+    color: white;
+    -webkit-text-stroke: 0.02em white;
 }
 .about-section {
-    height: 100%;
+    height: 60%;
     padding-top: 150px;
-    text-align: center;
-    background: lightgoldenrodyellow;
+    text-align: left;
+    background: #EFDECD;
+}
+
+.me {
+    float:left;
+    width:20%;
+    padding-right: 3%;
 }
 .whatwedo-section {
-    height: 100%;
+    height: 220%;
     padding-top: 150px;
     text-align: center;
     background: #fff;
+
+}
+.projects {
+    margin-bottom: 5%;
+}
+span {
+    display: inline-block;    
+}
+span:before,
+span:after {
+    border-top: 2px solid black;
+    display: block;
+    height: 1px;
+    content: " ";
+    width: 40%;
+    position: absolute;
+    left: 0;
+    top: 1.2em;
+}
+span:after {
+   right: 0;  
+   left: auto; 
+}
+.text {
+    text-align: left;
+    padding: 3%;
+}
+.p1 {
+    background: white;
+}
+.p2 {
+    background: lightgray;
+}
+.p3 {
+    background: white;
+}
+.p4 {
+    background: lightgray;
+}
+.python {
+    float: left;
+    width: 50%;
+    padding: 3%;
+}
+.boy {
+    float: left;
+    width: 50%;
+    padding: 3%;
+}
+.fish {
+    float: left;
+    width: 50%;
+    padding: 3%;
+}
+.word {
+    float: left;
+    width: 50%;
+    padding: 3%;
 }
 .contact-section {
-    height: 100%;
+    height: 50%;
     padding-top: 150px;
     text-align: center;
     background: #EFDECD;
@@ -79,6 +177,12 @@ p {
 }
 .navbar-default .navbar-nav > li > a {
     color: #000;
+}
+.e{
+    font-size: 18px;
+}
+.p{
+    font-size: 18px;
 }
 
 
