@@ -98,7 +98,7 @@ h2 {
     padding-right: 3%;
 }
 .whatwedo-section {
-    height: 240%;
+    height: 250%;
     padding-top: 150px;
     text-align: center;
     background: #fff;
@@ -141,6 +141,9 @@ span:after {
 .p4 {
     background: lightgray;
 }
+.p5 {
+    background: white;
+}
 .python {
     float: left;
     width: 50%;
@@ -167,8 +170,8 @@ span:after {
     padding: 3%;
 }
 .contact-section {
-    height: 50%;
-    padding-top: 150px;
+    min-height: 300px;
+    padding-top: 100px;
     text-align: center;
     background: #EFDECD;
 }
