@@ -5,7 +5,7 @@ This repository is a Graduation Portfolio containing course projects completed d
 
 ### Author Information
 
-* Created by: Jianghui Li
+* Name: Jianghui Li
 * SUID: 589727776
 * Email Address: jli159@syr.edu
 * Major: M.S. in Applied Data Science
